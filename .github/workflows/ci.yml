@@ -13,5 +13,4 @@ jobs:
         run: docker pull kbuffardi/cpp-container:latest
       - name: Test in container
         run: |
-          chmod +x test_runner.sh
-          docker run --platform linux/arm64 -v $(pwd):/usr/src -t kbuffardi/cpp-container
+          docker run -v $(pwd):/usr/src -t kbuffardi/cpp-container
